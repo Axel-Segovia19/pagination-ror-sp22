@@ -11,6 +11,11 @@ const MainNavbar = ({ user, handleLogout }) => {
       return (
         <>
           <Nav.Link>
+            <MainNavLink to='/languages'>
+              Languages
+            </MainNavLink>
+          </Nav.Link>
+          <Nav.Link>
             <li onClick={ () => handleLogout() }>
               Logout
             </li>

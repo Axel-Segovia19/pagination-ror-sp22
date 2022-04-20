@@ -10,7 +10,13 @@ const Flash = ({ variant, msg, setErrors }) => {
         setShow(false)
         setErrors(null)
       }} dismissible>
-        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+        <Alert.Heading>
+          { variant === 'danger' ?
+            'Oh snap! You got an error!'
+            :
+            ''
+          }  
+        </Alert.Heading>
         <p>
           {msg}
         </p>

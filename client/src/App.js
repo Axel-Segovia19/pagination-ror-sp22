@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import { Container } from 'react-bootstrap';
+import Languages from './components/languages/Languages';
 
 const App = () => (
   <>
@@ -15,6 +16,9 @@ const App = () => (
       <Container>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<ProtectedRoute />}>
+            <Route exact path="/languages" element={<Languages />} />
+          </Route>
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
           <Route component={NoMatch} />
